@@ -9,14 +9,14 @@ const HeroSection = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full min-h-auto">
-      <div className="w-full bg-[#FEDCD2] shadow-lg overflow-hidden flex flex-row items-center">
+      <div className="w-full bg-[#FEDCD2] relative shadow-lg overflow-hidden flex flex-row items-center">
         <div className="w-[340px] bg-[#FEDCD2]"></div>
 
         {/* Background Image Container */}
-        <div className="relative h-64 sm:h-[248px] md:h-[660px] md:w-[1004px]">
+        <div className="relative right-0 h-64 sm:h-[248px] md:h-[660px] md:w-[1004px] lg:w-[1020px]">
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute  inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImg2})` }}
           ></div>
 

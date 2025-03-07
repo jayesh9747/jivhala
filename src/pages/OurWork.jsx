@@ -4,7 +4,7 @@ import Footer from '../components/common/Footer.jsx';
 import OurWorkMain from '../components/OurWorkMain.jsx';
 function OurWork(){
     return (
-        <div className=''>
+        <div className='bg-[#F8F3EA] -mt-[30px]'>
            
             <OurWorkMain />
           

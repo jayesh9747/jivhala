@@ -18,6 +18,7 @@ export default {
       fontFamily: {
         quicksand: ['Quicksand', 'sans-serif'],
         inter:['Inter', 'sans-serif'],
+        bebas: ["Bebas Neue", "sans-serif"],
       },
       
     },

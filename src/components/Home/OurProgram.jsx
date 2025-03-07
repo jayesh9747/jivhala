@@ -1,68 +1,53 @@
+import React from 'react';
+import { FaHome, FaBook, FaComments } from 'react-icons/fa';
 
-import img2 from "../../assets/img2.png";
-import img3 from "../../assets/img3.png";
-import img4 from "../../assets/img4.png";
-const OurProgram = () => {
+const OurPrograms = () => {
   return (
-    <section className="py-12 px-12 md:px-8 lg:px-[120px] bg-gray-100">
-      <h2 className="text-[24px] text-[24px]  text-[24px] sm:text-[24px] md:text-[34px] lg:text-[40px]  font-semibold font-quicksand leading-[30px] sm:leading-[30px] md:leading-[42px] lg:leading-[50px] text-center mb-8">Our Programs</h2>
-      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-        {/* Card 1 */}
-        <div className="bg-white shadow-lg  rounded-2xl px-0 xl:px-0 lg:px-8">
-          <img
-            src={img4}
-            alt="Preschool for Neurodiverse Children"
-            className="w-full h-48 object-cover rounded-t-lg mb-4"
-          />
-          <h3 className=" px-5 mx:px-10  text-[17px] leading-[20.84px] sm:text-[17px] sm:leading-[20.84px] md:text-[20px] md:leading-[25px]  lg:text-[25px] lg:leading-[32px] font-semibold font-quicksand mb-2">
-            Preschool for Neurodiverse Children (Ages 2-6)
+    <div className="border border-blue-300 rounded-lg p-8 flex flex-col items-center">
+      <h2 className="font-['Bebas_Neue'] font-normal text-5xl leading-[100%] text-center mb-8">
+        OUR PROGRAMS
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full mb-6">
+        {/* Card 1 - Residential Care */}
+        <div className="bg-white border border-gray-200 rounded-[17px] pt-[21px] pr-4 pb-[9px] pl-6 flex flex-col gap-[22px] w-[356px] h-[239px]">
+          <FaHome className="text-[#0C1C63] w-[26.67px] h-[30px] mt-[5px] ml-[6.67px]" />
+          <h3 className="font-['Inter'] font-semibold text-[24px] leading-[100%]">
+            Residential Care
           </h3>
-          <p className=" px-5 mx:px-10 mt-8 mb-8 text-black font-intern text-[11px] leading-[13px]  sm:text-[11px] sm:leading-[13px] md:text-[16px] md:leading-[20px] lg:text-[16px] lg:leading-[20px]">
-            A supportive program fostering cognitive, social, and emotional
-            growth for neurodiverse children using UN CRPD principles.
+          <p className="font-['Inter'] font-light text-[16px] leading-[100%] text-gray-700">
+            A safe and nurturing home for 45 girls, offering them love, care, and a sense of belonging.
           </p>
         </div>
 
-        {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-2xl  px-0 xl:px-0 lg:px-8">
-          <img
-            src={img2}
-            alt="Comprehensive Support Services"
-            className="w-full h-48 object-cover rounded-t-lg mb-4"
-          />
-          <h3 className="px-5 mx:px-10  text-[17px] leading-[20.84px] sm:text-[17px] sm:leading-[20.84px] md:text-[20px] md:leading-[25px]  lg:text-[25px] lg:leading-[32px] font-semibold font-quicksand mb-2">
-            Comprehensive Support Services
+        {/* Card 2 - Quality Education */}
+        <div className="bg-white border border-gray-200 rounded-[17px] pt-[21px] pr-4 pb-[9px] pl-6 flex flex-col gap-[22px] w-[356px] h-[239px]">
+          <FaBook className="text-[#0C1C63] w-[26.67px] h-[30px] mt-[5px] ml-[6.67px]" />
+          <h3 className="font-['Inter'] font-semibold text-[24px] leading-[100%]">
+            Quality Education
           </h3>
-          <p className=" px-5 mx:px-10 mt-8 mb-8 text-black font-intern text-[11px] leading-[13px]  sm:text-[11px] sm:leading-[13px] md:text-[16px] md:leading-[20px] lg:text-[16px] lg:leading-[20px]">
-            Offering yoga, occupational, and physical therapies alongside
-            sensory learning to enhance motor skills, sensory processing, and
-            communication abilities.
+          <p className="font-['Inter'] font-light text-[16px] leading-[100%] text-gray-700">
+            Our passionate educators go beyond textbooks to unlock each girl's unique potential.
           </p>
         </div>
 
-        {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-2xl  px-0 xl:px-0 lg:px-8">
-          <img
-            src={img3}
-            alt="Remediation Programs"
-            className="w-full h-48 object-cover rounded-t-lg mb-4"
-          />
-          <h3 className="px-5 mx:px-10  text-[17px] leading-[20.84px] sm:text-[17px] sm:leading-[20.84px] md:text-[20px] md:leading-[25px]  lg:text-[25px] lg:leading-[32px] font-semibold font-quicksand mb-2">Remediation Programs</h3>
-          <p className=" px-5 mx:px-10 mt-8 mb-8 text-black font-intern text-[11px] leading-[13px]  sm:text-[11px] sm:leading-[13px] md:text-[16px] md:leading-[20px] lg:text-[16px] lg:leading-[20px]">
-            Providing personalized interventions to address cognitive,
-            behavioral, and sensory challenges, fostering academic growth and
-            social integration.
+        {/* Card 3 - Counseling Services */}
+        <div className="bg-white border border-gray-200 rounded-[17px] pt-[21px] pr-4 pb-[9px] pl-6 flex flex-col gap-[22px] w-[356px] h-[239px]">
+          <FaComments className="text-[#0C1C63] w-[26.67px] h-[30px] mt-[5px] ml-[6.67px]" />
+          <h3 className="font-['Inter'] font-semibold text-[24px] leading-[100%]">
+            Counseling Services
+          </h3>
+          <p className="font-['Inter'] font-light text-[16px] leading-[100%] text-gray-700">
+            Personalized emotional support to heal past traumas and build inner strength.
           </p>
         </div>
       </div>
-
-      <div className="text-center mt-8">
-        <button className="bg-[#304598] font-semibold text-[16px] sm:text-[16px] md:text-[20px] lg:text-[20px] text-white font-quicksand  rounded-full hover:bg-blue-700 transition duration-300 w-[201px] h-[35px] md:w-[253px] md:h-[45px] lg:h-[45px] lg:w-[253px] leading-[20px] ">
-          View All Programs
-        </button>
-      </div>
-    </section>
+      
+      <button className="bg-blue-900 text-white font-medium py-2 px-6 rounded-full mt-4">
+        Learn More
+      </button>
+    </div>
   );
 };
 
-export default OurProgram;
+export default OurPrograms;
