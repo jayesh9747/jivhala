@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header className="relative fixed top-0  w-full bg-white xl:shadow-md z-50 justify-center  ">
+    <header className="fixed top-0  w-full bg-white xl:shadow-md z-50 justify-center  ">
       <div className="flex items-center justify-between px-0 sm:px-0 md:px-12    h-18 sm:h-20 lg:h-30 ">
         {/* Logo */}<Link to="/">
        <div className="  rounded-full flex justify-center items-center p-2">
@@ -82,7 +82,7 @@ function Header() {
             isMenuOpen ? "block" : "hidden"
           } fixed inset-x-0 sm:static top-[60px] sm:top-auto left-0 w-full sm:w-auto bg-white  sm:flex items-center flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6 px-4 sm:px-0 py-6 sm:py-0 font-quicksand font-semibold transition-all h-screen sm:h-fit `}
         >
-          <ul className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-6 text-[13px] sm:text-[13px] md:text-[13px] lg:text-[16px] sm:text-[12px] md:text-[13px] lg:text-[16px] text-black ">
+          <ul className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-6 text-[13px] sm:text-[13px] md:text-[13px] lg:text-[16px] text-black ">
           <li
               className={`block transition-all font-semibold ${
                 isActive("/") ? "text-blue-500" : "hover:text-orange-500"
