@@ -40,7 +40,7 @@ const Journey = () => {
       </div>
 
       <div
-        className="absolute -bottom-[198px] right-20 sm:mb-20 sm:right-8 text-[#FB9EBB] z-20"
+        className="absolute -bottom-[198px] right-20 sm:mb-16 sm:right-8 text-[#FB9EBB] z-20"
         style={{
           fontFamily: "Bebas Neue",
           fontWeight: "400",
