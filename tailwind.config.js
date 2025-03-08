@@ -13,7 +13,7 @@ export default {
       },
       screens: {
         xs: { max: '378px' }, // Custom breakpoint for screens below 375px
-        // 'sm': '374px',    // Small devices (phones)
+        'sm': '377px',    // Small devices (phones)
         // 'md': '768px',    // Default medium size
         // 'lg': '1024px',   // Default large size
         'xl': '1200px',   // Custom breakpoint for 1200px

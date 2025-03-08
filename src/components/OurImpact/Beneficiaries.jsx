@@ -16,11 +16,8 @@ const Beneficiaries = () => {
   return (
     <div className="flex flex-col md:flex-row bg-white shadow-sm">
       {/* Left Section */}
-      <div className="w-7/12 pr-4 p-12">
-        <h2 className="font-bebas font-normal text-5xl leading-[100%] tracking-[0%] text-start text-black">
-          BENEFICIARIES
-        </h2>
-
+      <div className="sm:pr-4 p-4 sm:p-12 max-w-sm:w-full sm:w-7/12">
+        <h2 className="font-bebas font-normal text-5xl leading-[100%] tracking-[0%] text-start text-black">BENEFICIARIES</h2>
         <p className="mb-4 mt-5 md:w-full text-gray-700 text-xl">
           At the{" "}
           <span className="font-extrabold font-inter">
