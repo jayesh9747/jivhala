@@ -8,7 +8,7 @@ const WhoWeAre = () => {
   return (
     <div className="border overflow-hidden bg-white">
       <div className="py-10 px-6">
-      <h1 className="font-bebas font-normal text-[40px] leading-[100%] tracking-[0%] text-center text-black">
+        <h1 className="font-bebas font-normal text-[40px] leading-[100%] tracking-[0%] text-center text-black">
           WHO ARE WE
         </h1>
         <p className="text-center mx-auto w-[75%] text-black leading-relaxed mt-4  font-inter">
@@ -22,27 +22,78 @@ const WhoWeAre = () => {
           flight and potential blossoms into purpose.
         </p>
       </div>
-      <div className="bg-pink-200 grid grid-cols-4 gap-4 h-72">
-  {/* Image 1 - Bottom Right */}
-  <div className="rounded-md overflow-hidden flex justify-end items-end relative h-full">
-    <img src={img} alt="Image 1" className="w-full h-auto block self-end pl-4" />
-  </div>
 
-  {/* Image 2 - Touching Top & Centered */}
-  <div className="rounded-md overflow-hidden flex items-start">
-    <img src={img1} alt="Image 2" className="w-full h-auto block " />
-  </div>
 
-  {/* Image 3 - Bottom Right */}
-  <div className="rounded-md overflow-hidden flex justify-end items-end relative h-full">
-    <img src={img2} alt="Image 3" className="w-full h-auto block self-end pl-4" />
-  </div>
+      {/* Responsive container that switches between mobile and desktop layouts */}
+      <div className="md:hidden">
+        {/* Mobile View (< 768px) */}
+        <div className="bg-pink-200 p-2">
+          {/* Only row for mobile - showing just 2 images */}
+          <div className="flex space-x-5">
+            {/* First image - padding on top */}
+            <div className="w-1/2 rounded-md overflow-hidden">
+              <div className="pt-4">
+                <img src={img} alt="Image 1" className="w-full h-auto" />
+              </div>
+            </div>
 
-  {/* Image 4 - Touching Top & Centered */}
-  <div className="rounded-md overflow-hidden flex items-start">
-    <img src={img3} alt="Image 4" className="w-full h-auto block" />
-  </div>
-</div>
+            {/* Second image - padding at bottom */}
+            <div className="w-1/2 rounded-md overflow-hidden">
+              <div className="pb-4">
+                <img src={img1} alt="Image 2" className="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+
+          {/* Third and fourth images - hidden on mobile, visible on larger screens */}
+          <div className="hidden md:flex space-x-5 mt-5">
+            <div className="w-1/2 overflow-hidden">
+              <div className="pt-4">
+                <img src={img2} alt="Image 3" className="w-full h-auto" />
+              </div>
+            </div>
+
+            <div className="w-1/2 overflow-hidden">
+              <div className="pb-4">
+                <img src={img3} alt="Image 4" className="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop View (≥ 768px) */}
+      <div className="hidden md:block">
+        <div className="bg-[#FB9EBB] grid grid-cols-4 gap-4 h-72">
+          {/* Image 1 - Bottom Right */}
+          <div className="rounded-md overflow-hidden flex justify-end items-end relative h-full">
+            <img
+              src={img}
+              alt="Image 1"
+              className="w-full h-auto block self-end pl-4"
+            />
+          </div>
+
+          {/* Image 2 - Touching Top & Centered */}
+          <div className="rounded-md overflow-hidden flex items-start">
+            <img src={img1} alt="Image 2" className="w-full h-auto block" />
+          </div>
+
+          {/* Image 3 - Bottom Right */}
+          <div className="rounded-md overflow-hidden flex justify-end items-end relative h-full">
+            <img
+              src={img2}
+              alt="Image 3"
+              className="w-full h-auto block self-end pl-4"
+            />
+          </div>
+
+          {/* Image 4 - Touching Top & Centered */}
+          <div className="rounded-md overflow-hidden flex items-start">
+            <img src={img3} alt="Image 4" className="w-full h-auto block" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

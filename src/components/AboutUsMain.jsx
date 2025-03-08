@@ -1,6 +1,5 @@
 import AboutHeroSection from "../components/AboutUs/AboutHeroSection.jsx";
 import WhoWeAre from "../components/AboutUs/WhoWeAre.jsx";
-import Contact from "../components/AboutUs/Contact.jsx";
 import Founder from "./AboutUs/Founder.jsx";
 function AboutUsMain() {
   return (
