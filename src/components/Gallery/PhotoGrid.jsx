@@ -1,4 +1,3 @@
-// PhotoGrid.jsx
 import React from "react";
 
 const PhotoGrid = ({ title, images }) => {
@@ -19,8 +18,8 @@ const PhotoGrid = ({ title, images }) => {
         {title || "Spreading Joy to Everyone"}
       </h1>
 
-      {/* Photo Grid Layout */}
-      <div className="grid grid-cols-12 gap-2">
+      {/* Photo Grid Layout - Desktop version */}
+      <div className="hidden md:grid grid-cols-12 gap-2">
         {/* Left Column - Small Images */}
         <div className="col-span-2 flex flex-col gap-2">
           <div className="bg-white">
@@ -30,7 +29,7 @@ const PhotoGrid = ({ title, images }) => {
             <img
               src={leftBottom}
               alt="Group photo 2"
-              className="w-full h-auto "
+              className="w-full h-auto"
             />
           </div>
         </div>
@@ -42,7 +41,7 @@ const PhotoGrid = ({ title, images }) => {
 
         {/* Right Column - Large and Small Images */}
         <div className="col-span-4 flex flex-col gap-2">
-          <div className="bg-white ">
+          <div className="bg-white">
             <img
               src={rightTop}
               alt="Featured group"
@@ -64,6 +63,39 @@ const PhotoGrid = ({ title, images }) => {
                 className="w-full h-fit"
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Layout (< 768px) */}
+      <div className="md:hidden flex flex-col gap-3">
+        {/* Main image first */}
+        <div className="bg-white w-full">
+          <img src={center} alt="Main group photo" className="w-full h-auto" />
+        </div>
+        
+        {/* Two small images side by side */}
+        <div className="flex gap-2">
+          <div className="bg-white w-1/2">
+            <img src={leftTop} alt="Group photo 1" className="w-full h-auto" />
+          </div>
+          <div className="bg-white w-1/2">
+            <img src={leftBottom} alt="Group photo 2" className="w-full h-auto" />
+          </div>
+        </div>
+        
+        {/* Featured group image */}
+        <div className="bg-white w-full">
+          <img src={rightTop} alt="Featured group" className="w-full h-auto" />
+        </div>
+        
+        {/* Last two small images side by side */}
+        <div className="flex gap-2">
+          <div className="bg-white w-1/2">
+            <img src={rightBottomLeft} alt="Small group 1" className="w-full h-auto" />
+          </div>
+          <div className="bg-white w-1/2">
+            <img src={rightBottomRight} alt="Small group 2" className="w-full h-auto" />
           </div>
         </div>
       </div>

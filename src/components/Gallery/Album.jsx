@@ -1,5 +1,3 @@
-
-// Album.jsx
 import React from 'react';
 import PhotoGrid from './PhotoGrid';
 import part1_1 from '../../assets/part1_1.png';
@@ -14,8 +12,6 @@ import part2_3 from '../../assets/part2_3.png';
 import part2_4 from '../../assets/part2_4.png';
 import part2_5 from '../../assets/part2_5.png';
 import part2_6 from '../../assets/part2_6.png';
-
-
 
 const Album = () => {
   // Create three different sets of images from our imported assets
@@ -47,22 +43,18 @@ const Album = () => {
   };
 
   return (
-    <div className=" mx-auto bg-[#FEDCD2] w-full px-10 lg:px-16 py-10 ">
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+    <div className="mx-auto bg-[#FEDCD2] w-full px-4 sm:px-6 md:px-10 lg:px-16 py-6 md:py-10">
+      <div className="grid grid-cols-1 gap-6 md:gap-8">
         <PhotoGrid 
-          title="Spreading Joy to Everyone" 
-          images={gridOneImages} 
+          title="Spreading Joy to Everyone"
+          images={gridOneImages}
         />
         
         <PhotoGrid 
-          title="Our Humble Abode" 
-          images={gridTwoImages} 
+          title="Our Humble Abode"
+          images={gridTwoImages}
         />
         
-        <PhotoGrid 
-          title="Happy Moments" 
-          images={gridThreeImages} 
-        />
       </div>
     </div>
   );
