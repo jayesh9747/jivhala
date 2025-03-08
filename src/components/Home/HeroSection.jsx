@@ -8,15 +8,15 @@ const HeroSection = () => {
   const sliderRef = useRef(null);
 
   return (
-    <div className="flex flex-col justify-center items-center w-full min-h-auto">
+    <div className="flex md:mt-8 flex-col justify-center items-center w-full min-h-auto">
       <div className="w-full bg-[#FEDCD2] relative shadow-lg overflow-hidden flex flex-row items-center">
-        <div className="w-[340px] bg-[#FEDCD2]"></div>
+        <div className="w-[420px] md:w-4/12 lg:w-4/12 bg-[#FEDCD2]"></div>
 
         {/* Background Image Container */}
-        <div className="relative right-0 h-64 sm:h-[248px] md:h-[660px] md:w-[1004px] lg:w-[1020px]">
+        <div className="relative -right-2 -bottom-2 lg:right-0 lg:bottom-0 h-[332px] sm:h-[398px] md:h-[660px] w-[345px] md:w-[1024px] lg:w-10/12 xl:w-9/12">
           {/* Background Image */}
           <div
-            className="absolute  inset-0 bg-cover bg-center"
+            className="absolute inset-0 inset-x-1 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImg2})` }}
           ></div>
 
@@ -30,12 +30,12 @@ const HeroSection = () => {
         </div>
 
         {/* Content Over Image */}
-        <div className="absolute top-[176px] left-[80px] h-[332px] inset-y-0 flex flex-col lg:gap-4 justify-center items-start p-6 space-y-4 text-white lg:ml-12 font-quicksand">
+        <div className="absolute my-auto left-[20px] md:left-[30px] lg:left-[80px] inset-y-0 flex flex-col lg:gap-4 justify-center items-start p-6 space-y-4 text-white lg:ml-12 font-quicksand">
           <div className="leading-tight sm:leading-tight md:leading-snug lg:leading-[55px]">
-            <h1 className="text-[17px] text-[#0B1957] sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-              <p>EMPOWERING GIRLS,</p>
-              <p>TRANSFORMING COMMUNITIES</p>
-            </h1>
+            <div className="flex flex-col gap-y-0 sm:gap-y-6">
+              <p className="text-[20px] leading-[110%] tracking-[8%] font-bebas text-[#0B1957] sm:text-2xl md:text-[60px] lg:text-[60px] font-normal">EMPOWERING GIRLS,</p>
+              <p className="text-[20px] leading-[110%] tracking-[8%] font-bebas text-[#0B1957] sm:text-2xl md:text-[60px] lg:text-[60px] font-normal">TRANSFORMING COMMUNITIES</p>
+            </div>
           </div>
           <div>
             <p className="text-[9px] text-[#0B1957] sm:text-[9px] md:text-lg font-inter leading-[11px]">
@@ -48,7 +48,7 @@ const HeroSection = () => {
           </div>
           <div className="flex gap-2 font-quicksand mt-10">
             <Link to="/donate">
-              <button className="bg-[#0B1957] hover:bg-yellow-500 rounded-3xl shadow-md text-[9px] sm:text-[9px] md:text-[20px] lg:text-[25px] w-[65px] h-[19px] sm:w-[65px] sm:h-[19px] md:w-[193px] md:h-[57px] lg:w-[151px] lg:h-[45px]">
+              <button className="bg-[#0B1957]  rounded-lg shadow-md text-[9px] sm:text-[9px] md:text-[20px] px-12 py-3">
                 Donate
               </button>
             </Link>

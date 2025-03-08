@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'blue-jivhala': 'var(--BLUE-Jivhala, #0B1956)',
+        cream: '#FAF3EB',
+      },
       screens: {
         xs: { max: '378px' }, // Custom breakpoint for screens below 375px
         // 'sm': '374px',    // Small devices (phones)
@@ -19,6 +23,7 @@ export default {
         quicksand: ['Quicksand', 'sans-serif'],
         inter:['Inter', 'sans-serif'],
         bebas: ["Bebas Neue", "sans-serif"],
+        roboto: ['Roboto', 'sans-serif'],
       },
       
     },

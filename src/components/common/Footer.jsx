@@ -1,4 +1,4 @@
-import logo1 from "../../assets/logo.png";
+import logo1 from "../../assets/lg.png";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -52,16 +52,17 @@ const Footer = () => {
         <img
           src={logo1} // Replace with the correct image path
           alt="ITFFC Logo"
-          className="w-[37px] h-[36px]  sm:w-[78px] sm:h-[78px] md:w-[142px] md:h-[142px] lg:w-[142px] lg:h-[142px] object-contain p-2"
+          className="w-[78px] h-[78px]  sm:w-[78px] sm:h-[78px] md:w-[142px] md:h-[142px] lg:w-[142px] lg:h-[142px] object-contain p-2"
         />
       {/* Text Section */}
        <div>
+        
       </div>
 
       </div> </Link>         
         </div>
         {/* Horizontal Line */}
-        <hr className="border-t border-white mt-10 mb-10" />
+        <hr className="border-t border-white mt-10 mb-24 md:mb-10 hidden md:visible" />
       </div>
     </footer>
   );

@@ -32,7 +32,7 @@ function Header() {
         <img
           src={logo1} // Replace with the correct image path
           alt="ITFFC Logo"
-          className="w-[36px] h-[36px] sm:h-[36px] sm:w-[36px] md:h-[80px] md:w-[80px] lg:h-[83px] lg:w-[83px] object-contain p-2"
+          className="w-[46px] h-[46px] sm:h-[36px] sm:w-[36px] md:h-[80px] md:w-[80px] lg:h-[83px] lg:w-[83px] object-contain p-1 md:p-2"
         />
       </div>
       </Link>
@@ -40,7 +40,7 @@ function Header() {
         <div className="sm:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-blue-700 focus:outline-none"
+            className="text-[#0B1956] mr-6 focus:outline-none"
           >
             {isMenuOpen ? (
               <svg
@@ -99,10 +99,10 @@ function Header() {
             </li>
             <li
               className={`block transition-all font-semibold ${
-                isActive("/getinvolved") ? "text-blue-500" : "hover:text-orange-500"
+                isActive("/ourimpact") ? "text-blue-500" : "hover:text-orange-500"
               }`}
             >
-              <Link to="/getinvolved" onClick={handleMenuClose}>Our Impact</Link>
+              <Link to="/ourimpact" onClick={handleMenuClose}>Our Impact</Link>
             </li>
             <li
               className={`block transition-all font-semibold ${
@@ -113,17 +113,17 @@ function Header() {
             </li>
             <li
               className={`block transition-all font-semibold ${
-                isActive("/aboutus") ? "text-blue-500" : "hover:text-orange-500"
+                isActive("/gallery") ? "text-blue-500" : "hover:text-orange-500"
               }`}
             >
-              <Link to="/aboutus" onClick={handleMenuClose}>Gallery</Link>
+              <Link to="/gallery" onClick={handleMenuClose}>Gallery</Link>
             </li>
           </ul>
-          <button className="bg-[#304598] text-white w-[86px] h-[32.2px] sm:w-[86px] sm:h-[32.2px] md:w-[97px] md:h-[40px] lg:w-[] lg:h-[] rounded-full hover:bg-blue-500 transition-all text-[13px] sm:text-[13px] md:text-[16px] lg:text-[16px] font-quicksand">
+          <button className="bg-[#0B1956] text-white px-6 py-2 rounded-lg hover:bg-blue-500 transition-all text-[13px] sm:text-[13px] md:text-[16px] lg:text-[16px] font-quicksand">
            <Link to="/donate" onClick={handleMenuClose}>Donate</Link>
           </button>
           <div className='hidden xs:block'>
-          <hr  className=' border-blue-600 p-2 mr-8'  />
+          <hr  className=' border-[#0B1956] p-2 mr-8'  />
           </div>
          
         </nav>

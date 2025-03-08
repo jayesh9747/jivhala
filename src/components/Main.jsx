@@ -7,19 +7,20 @@ import OurProgram from "../components/Home/OurProgram.jsx";
 import JoinUs from "../components/Home/JoinUs.jsx";
 import Contact from "./Home/Contact.jsx";
 import DonationForm from "./Home/DonationForm.jsx";
+import Vision from "./Home/Vision.jsx";
 
 function Main() {
   return (
-    <div className="flex flex-col gap-10 m-4 sm:m-4 md:m-8 lg:m-8">
+    <div className="bg-[#F8F3EA] -mt-[30px] pb-8">
+    <div className="flex flex-col gap-10 my-4 sm:m-4 md:m-8 lg:m-8">
       <HeroSection />
-      <Mission />
+      <Vision />
       <PerspectiveSection />
-      <ImageSection />
-      <StatsCard />
+      <Mission /> 
       <OurProgram />
-      <Mission />
-      <Contact />
       <DonationForm />
+      <Contact />
+    </div>
     </div>
   );
 }

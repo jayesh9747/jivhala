@@ -1,15 +1,12 @@
-
-import ourworkimg from '../../assets/ourwork.png';
-function OurWorkHeroSection(){
-
-    return(  
-        <div className="relative w-full mt-10 h-[181px] sm:h-[115.64px]  md:h-[205.43px] lg:h-[252px]  flex items-center justify-center bg-white">
+function OurWorkHeroSection() {
+  return (
+    <div className="relative w-full mt-10 h-[181px] sm:h-[115.64px]  md:h-[205.43px] lg:h-[252px]  flex items-center justify-center bg-white">
       <div className="relative z-10 text-center px-4">
-      <h1 className="font-bebas font-normal text-[60px] leading-[100%] tracking-[0%] text-center text-black">
-  OUR PROGRAMS
-</h1>
+        <h1 className="font-bebas font-normal text-[30px] md:text-[60px] leading-[100%] tracking-[0%] text-center text-black">
+          OUR PROGRAMS
+        </h1>
       </div>
-       </div>
-    );
+    </div>
+  );
 }
 export default OurWorkHeroSection;

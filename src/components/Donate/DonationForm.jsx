@@ -1,241 +1,159 @@
 import { useState } from "react";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-
 import { useNavigate } from "react-router-dom";
-const DonationForm = () => {
-  const [donationType, setDonationType] = useState("oneTime");
-  const [phone, setPhone] = useState("");
+
+const DonationPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    amount: "",
+    message: "",
+    paymentOption: ""
+  });
+  
   const navigate = useNavigate();
 
-  const handleDonateClick = () => {
-    navigate("/upi-payment"); // Redirect to the UPI Payment page
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    navigate("/payment-confirmation");
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4 bg-white border border-gray-100">
-      <h1 className="text-[48px] leading-[60px] font-quicksand font-bold text-center mb-4">
-        Make A Donation!
-      </h1>
-      <p className="text-center mb-10 text-black text-[20px] leading-[30px] font-inter">
-        Your time and skills can have a profound impact on the lives of the
-        children we serve.
-      </p>
+    <div className="min-h-screen bg-[#FB9EBB] flex flex-col items-center py-8">
+      {/* Motivational text */}
+      <div className="text-center text-white mb-4 md:mb-8 py-6 md:py-16 w-11/12">
+        <h1 className="text-xl md:text-5xl font-bebas leading-[100%] tracking-[10%] font-normal uppercase mb-2">Your generosity matters!</h1>
+        <h2 className="text-xl md:text-5xl font-bebas leading-[100%] tracking-[10%] font-normal uppercase mb-2">Together, we can create brighter futures.</h2>
+      </div>
+      
+      {/* Donation form card */}
+      <div className="w-10/12 md:max-w-2xl lg:max-w-3xl bg-white rounded-lg shadow-lg py-8 px-6 mb-16">
+        <h2 className="text-xl md:text-3xl font-inter font-bold text-center text-black mb-1 ">
+          Support Us
+        </h2>
+        <p className="text-center text-[10px] md:text-lg text-black mb-4 md:mb-6">
+          Every contribution counts! Fill out the form below to be part of this transformative journey.
+        </p>
 
-      <form>
-        {/* Donation Type */}
-        <div className="mb-6">
-          <h2 className="text-[32px] leading-[20px] font-quicksand font-semibold mb-10">
-            Donation Type
-          </h2>
-          <div className="space-y-8">
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="radio"
-                  name="donationType"
-                  value="oneTime"
-                  checked={donationType === "oneTime"}
-                  onChange={() => setDonationType("oneTime")}
-                  className="form-radio text-black font-bold"
-                />
-                <span className="text-[16px] leading-[20px] font-quicksand font-semibold">
-                  One Time Donation
-                </span>
-              </label>
-              <input
-                type="number"
-                placeholder="Enter Amount INR"
-                className="w-full mt-2 p-2 border rounded-md"
-              />
-            </div>
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="radio"
-                  name="donationType"
-                  value="monthly"
-                  checked={donationType === "monthly"}
-                  onChange={() => setDonationType("monthly")}
-                  className="form-radio text-indigo-600"
-                />
-                <span className="text-[16px] leading-[20px] font-quicksand font-semibold">
-                  Monthly Donation
-                </span>
-              </label>
-              <input
-                type="number"
-                placeholder="Enter Amount INR"
-                className="w-full mt-2 p-2 border rounded-md"
-              />
-            </div>
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="radio"
-                  name="donationType"
-                  value="gifts"
-                  checked={donationType === "gifts"}
-                  onChange={() => setDonationType("gifts")}
-                  className="form-radio text-indigo-600"
-                />
-                <span className="text-[16px] leading-[20px] font-quicksand font-semibold">
-                  Gifts
-                </span>
-              </label>
-              <div className="space-y-4 mt-4">
-                <label className="block">
-                  <input
-                    type="checkbox"
-                    className="form-checkbox text-indigo-600"
-                  />
-                  <span className="text-[16px] leading-[20px] font-quicksand font-semibold ml-2">
-                    Donate Items
-                  </span>
-                  <p className="lg:mr-40 text-gray-500 text-[16px] leading-[24px] font-inter font-medium mt-2">
-                    Donate goods or services that can benefit our children or
-                    organization, such as equipment, furniture, or professional
-                    services.
-                  </p>
-                </label>
-                <input
-                  placeholder="Enter number of items"
-                  className="w-full mt-2 p-2 border rounded-md"
-                />
-                <label className="block">
-                  <input
-                    type="checkbox"
-                    className="form-checkbox text-indigo-600"
-                  />
-                  <span className="ml-2 text-[16px] leading-[20px] font-quicksand font-semibold">
-                    Tribute Gifts
-                  </span>
-                  <p className="text-gray-500 text-[16px] leading-[24px] font-inter font-medium mt-2 lg:mr-36">
-                    Make a donation in honor or memory of someone special, with
-                    acknowledgment sent to the honoree or their family.
-                  </p>
-                </label>
-                <input
-                  placeholder="In Memory Of"
-                  className="w-full mt-2 p-2 border rounded-md"
-                />
-                <textarea
-                  placeholder="Acknowledgement Message"
-                  className="w-full mt-2 p-2 border rounded-md"
-                />
-                <input
-                  placeholder="Recipient Name"
-                  className="w-full mt-2 p-2 border rounded-md"
-                />
-                <input
-                  placeholder="Recipient Email"
-                  className="w-full mt-2 p-2 border rounded-md"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="flex items-center space-x-2 mb-4">
-                <input
-                  type="radio"
-                  name="donationType"
-                  value="corporate"
-                  checked={donationType === "corporate"}
-                  onChange={() => setDonationType("corporate")}
-                  className="form-radio text-indigo-600"
-                />
-                <span className="ml-2 text-[16px] leading-[20px] font-quicksand font-semibold">
-                  Corporate Sponsorship
-                </span>
-              </label>
-              <div className="space-y-8">
-                <label>
-                  <span className="font-quicksand font-semibold mb-4">
-                    Company Name
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full p-2 border rounded-md mb-6"
-                  />
-                </label>
-                <label>
-                  <span className="font-quicksand font-semibold">
-                    Enter Amount
-                  </span>
-                  <input
-                    type="number"
-                    placeholder="Amount"
-                    className="w-full p-2 border rounded-md mb-6"
-                  />
-                </label>
-                <label>
-                  <span className="font-quicksand font-semibold mb-4">Email</span>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="w-full p-2 border rounded-md mb-6"
-                  />
-                </label>
-              </div>
-            </div>
+        <form onSubmit={handleSubmit}>
+          {/* Name Field */}
+          <div className="mb-4 md:mb-6">
+            <label htmlFor="name" className="block text-block text-xs md:text-md font-inter font-normal mb-1">
+              Name:
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              className="w-full py-1 px-2 md:p-2 border border-gray-300 rounded"
+              required
+            />
           </div>
-        </div>
 
-        {/* Donor Information */}
-        <div className="mb-6">
-          <h2 className="text-[32px] leading-[20px] font-semibold mb-8 mt-6 font-quicksand">
-            Donor Information
-          </h2>
-          <div className="space-y-8">
-            <label>
-              <span className="font-quicksand font-semibold mb-4">Name</span>
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-2 border rounded-md mb-6"
-              />
+          {/* Email Field */}
+          <div className="mb-4 md:mb-6">
+            <label htmlFor="email" className="block text-block text-xs md:text-md font-inter font-normal mb-1">
+              Email:
             </label>
-            <label>
-              <span className="font-quicksand font-semibold">Email</span>
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-2 border rounded-md mb-6"
-              />
-            </label>
-            <label>
-              <span className="font-quicksand font-semibold mb-4">
-                Phone Number
-              </span>
-              <div className="flex">
-                <PhoneInput
-                  type="text"
-                  value={phone}
-                  onChange={setPhone}
-                  placeholder="Phone Number"
-                  inputClass="!w-full !h-full !pl-16 !border-gray-300 !rounded-lg !px-4 !py-2 !focus:outline-none !focus:ring-2 !focus:ring-blue-400"
-                  buttonClass="!absolute !left-0 !h-full !bg-gray-100 !border-r !border-gray-300 !focus:outline-none"
-                  dropdownClass="!bg-white !border-gray-300 !rounded-md !shadow-md"
-                  containerClass="relative w-full"
-                />
-              </div>
-            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              className="w-full py-1 px-2 md:p-2 border border-gray-300 rounded"
+              required
+            />
           </div>
-        </div>
 
-        {/* Submit Button */}
-        <div className="text-center">
+          {/* Phone Number Field */}
+          <div className="mb-4 md:mb-6">
+            <label htmlFor="phone" className="block text-block text-xs md:text-md font-inter font-normal mb-1">
+              Phone Number:
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Your Phone Number"
+              className="w-full py-1 px-2 md:p-2 border border-gray-300 rounded"
+            />
+          </div>
+
+          {/* Donation Amount Field */}
+          <div className="mb-4 md:mb-6">
+            <label htmlFor="amount" className="block text-block text-xs md:text-md font-inter font-normal mb-1">
+              Donation Amount:
+            </label>
+            <input
+              type="text"
+              id="amount"
+              name="amount"
+              value={formData.amount}
+              onChange={handleChange}
+              placeholder="Amount"
+              className="w-full py-1 px-2 md:p-2 border border-gray-300 rounded"
+              required
+            />
+          </div>
+
+          {/* Message/Note Field */}
+          <div className="mb-4 md:mb-6">
+            <label htmlFor="message" className="block text-block text-xs md:text-md font-inter font-normal mb-1">
+              Message/Note:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              className="w-full py-1 px-2 md:p-2 border border-gray-300 rounded h-24"
+            />
+          </div>
+
+          {/* Payment Options Field */}
+          <div className="mb-4 md:mb-6">
+            <label htmlFor="paymentOption" className="block text-block text-xs md:text-md font-inter font-normal mb-1">
+              Payment Options:
+            </label>
+            <input
+              type="text"
+              id="paymentOption"
+              name="paymentOption"
+              value={formData.paymentOption}
+              onChange={handleChange}
+              className="w-full py-1 px-2 md:p-2 border border-gray-300 rounded"
+            />
+          </div>
+
+          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-[#304598] text-white h-[36px] font-inter text-[16px] leading-[24px] rounded-full hover:bg-indigo-700 transition"
-            onClick={handleDonateClick}
+            className="w-full bg-navy-blue text-white rounded font-medium  py-3 transition duration-300"
+            style={{ backgroundColor: "#0B1956" }}
           >
-            Proceed
+            Donate
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default DonationForm;
+export default DonationPage;
