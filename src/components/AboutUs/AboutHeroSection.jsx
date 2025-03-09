@@ -1,5 +1,4 @@
 
-import ourworkimg from '../../assets/ourwork.png';
 function AboutHeroSection(){
 
   return (
