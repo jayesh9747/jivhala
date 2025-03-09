@@ -23,7 +23,6 @@ const WhoWeAre = () => {
         </p>
       </div>
 
-
       {/* Responsive container that switches between mobile and desktop layouts */}
       <div className="md:hidden">
         {/* Mobile View (< 768px) */}

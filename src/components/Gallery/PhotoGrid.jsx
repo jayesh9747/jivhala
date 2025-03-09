@@ -73,29 +73,41 @@ const PhotoGrid = ({ title, images }) => {
         <div className="bg-white w-full">
           <img src={center} alt="Main group photo" className="w-full h-auto" />
         </div>
-        
+
         {/* Two small images side by side */}
         <div className="flex gap-2">
           <div className="bg-white w-1/2">
             <img src={leftTop} alt="Group photo 1" className="w-full h-auto" />
           </div>
           <div className="bg-white w-1/2">
-            <img src={leftBottom} alt="Group photo 2" className="w-full h-auto" />
+            <img
+              src={leftBottom}
+              alt="Group photo 2"
+              className="w-full h-auto"
+            />
           </div>
         </div>
-        
+
         {/* Featured group image */}
         <div className="bg-white w-full">
           <img src={rightTop} alt="Featured group" className="w-full h-auto" />
         </div>
-        
+
         {/* Last two small images side by side */}
         <div className="flex gap-2">
           <div className="bg-white w-1/2">
-            <img src={rightBottomLeft} alt="Small group 1" className="w-full h-auto" />
+            <img
+              src={rightBottomLeft}
+              alt="Small group 1"
+              className="w-full h-auto"
+            />
           </div>
           <div className="bg-white w-1/2">
-            <img src={rightBottomRight} alt="Small group 2" className="w-full h-auto" />
+            <img
+              src={rightBottomRight}
+              alt="Small group 2"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

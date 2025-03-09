@@ -26,6 +26,7 @@ function Header() {
 
   return (
     <header className="fixed top-0  w-full bg-white xl:shadow-md z-50 justify-center  ">
+
       <div className="flex items-center justify-between px-0 sm:px-0 md:px-12    h-18 sm:h-20 lg:h-30 ">
         {/* Logo */}<Link to="/">
        <div className="  rounded-full flex justify-center items-center p-2">

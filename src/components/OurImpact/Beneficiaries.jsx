@@ -18,7 +18,8 @@ const Beneficiaries = () => {
       {/* Left Section */}
       <div className="sm:pr-4 p-4 sm:p-12 max-w-sm:w-full sm:w-7/12">
         <h2 className="font-bebas font-normal text-5xl leading-[100%] tracking-[0%] text-start text-black">BENEFICIARIES</h2>
-        <p className="mb-4 mt-5 md:w-full text-gray-700 text-xl">
+
+        <p className="mb-4 mt-5 text-gray-700 text-xl">
           At the{" "}
           <span className="font-extrabold font-inter">
             Suresh Muthe Residential Hostel
@@ -54,9 +55,7 @@ const Beneficiaries = () => {
                 alt="Achievement 2"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">
-                Annual talent gatherings fostering self-expression.
-              </span>
+              <span className="text-lg">Annual talent gatherings fostering self-expression.</span>
             </li>
             <li className="flex items-center">
               <img
@@ -64,9 +63,7 @@ const Beneficiaries = () => {
                 alt="Achievement 3"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">
-                Employment support for mothers of hostel residents.
-              </span>
+              <span className="text-lg">Employment support for mothers of hostel residents.</span>
             </li>
             <li className="flex items-center">
               <img
@@ -94,9 +91,7 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">
-                Academic growth and love for learning.
-              </span>
+              <span className="text-lg">Academic growth and love for learning.</span>
             </li>
             <li className="flex items-center">
               <img
@@ -120,9 +115,7 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">
-                Role models inspiring their communities.
-              </span>
+              <span className="text-lg">Role models inspiring their communities.</span>
             </li>
           </ul>
         </div>
