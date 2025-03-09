@@ -32,7 +32,7 @@ function Header() {
        <div className="  rounded-full flex justify-center items-center p-2">
         <img
           src={logo1} // Replace with the correct image path
-          alt="ITFFC Logo"
+          alt="Jivhala Logo"
           className="w-[46px] h-[46px] sm:h-[36px] sm:w-[36px] md:h-[80px] md:w-[80px] lg:h-[83px] lg:w-[83px] object-contain p-1 md:p-2"
         />
       </div>
@@ -93,24 +93,24 @@ function Header() {
             </li>
             <li
               className={`block transition-all font-semibold ${
-                isActive("/ourwork") ? "text-blue-500" : "hover:text-orange-500"
+                isActive("/our-work") ? "text-blue-500" : "hover:text-orange-500"
               }`}
             >
-              <Link to="/ourwork" onClick={handleMenuClose}>Our Work</Link>
+              <Link to="/our-work" onClick={handleMenuClose}>Our Work</Link>
             </li>
             <li
               className={`block transition-all font-semibold ${
-                isActive("/ourimpact") ? "text-blue-500" : "hover:text-orange-500"
+                isActive("/our-impact") ? "text-blue-500" : "hover:text-orange-500"
               }`}
             >
-              <Link to="/ourimpact" onClick={handleMenuClose}>Our Impact</Link>
+              <Link to="/our-impact" onClick={handleMenuClose}>Our Impact</Link>
             </li>
             <li
               className={`block transition-all font-semibold ${
-                isActive("/aboutus") ? "text-blue-500" : "hover:text-orange-500"
+                isActive("/about-us") ? "text-blue-500" : "hover:text-orange-500"
               }`}
             >
-              <Link to="/aboutus" onClick={handleMenuClose}>About Us</Link>
+              <Link to="/about-us" onClick={handleMenuClose}>About Us</Link>
             </li>
             <li
               className={`block transition-all font-semibold ${

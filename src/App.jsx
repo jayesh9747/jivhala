@@ -18,8 +18,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ourwork" element={<OurWork />} />
-          <Route path="/ourimpact" element={<OurImpact />} />
+          <Route path="/our-work" element={<OurWork />} />
+          <Route path="/our-impact" element={<OurImpact />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/upi-payment" element={<UPIPayment />} />
