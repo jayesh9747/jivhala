@@ -40,7 +40,7 @@ const Journey = () => {
       </div>
 
       <div
-        className="absolute -bottom-[198px] right-20 sm:mb-16 sm:right-8 xl:-bottom-[270px] 2xl:-bottom-[275px] text-[#FB9EBB] z-20"
+        className="absolute -bottom-[198px] right-20 sm:mb-16 sm:right-8 xl:-bottom-[270px] 2xl:-bottom-[275px] text-[#FB9EBB] z-20 "
         style={{
           fontFamily: "Bebas Neue",
           fontWeight: "400",
@@ -63,7 +63,7 @@ const Journey = () => {
             <img
               src={photo1}
               alt="Background"
-              className="w-full h-full object-cover opacity-20"
+              className="w-full h-full object-fill opacity-20"
             />
           </div>
         </div>
@@ -111,7 +111,7 @@ const Journey = () => {
       </div>
 
       {/* 4x3 Grid for text boxes - Keeping the original positioning */}
-      <div className="hidden sm:grid grid-cols-3 grid-rows-4 gap-4 relative z-10 h-full">
+      <div className="hidden sm:grid grid-cols-3 grid-rows-4 gap-4 relative z-10 h-full mt-20">
         {/* Row 1: [1, 0, 0] */}
         <div className="col-span-1 row-span-1">
           <div className="bg-white rounded-md p-4 shadow h-full">
@@ -199,10 +199,22 @@ const Journey = () => {
         </div>
       </div>
 
-      {/* mobile view  */}
-      <div className="flex z-50 sm:hidden flex-col">
-        <div className="flex flex-col my-10 gap-4">
-          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+      {/* mobile view with background images */}
+      <div className="flex z-10 sm:hidden flex-col relative">
+        {/* First section with background image */}
+        <div className="flex flex-col my-10 gap-4 relative">
+          {/* Background image for first section */}
+          <div className="absolute top-0 right-0 w-full h-full z-0">
+            <div className="absolute right-0 top-16 w-[70%] h-[50%]">
+              <img
+                src={photo1}
+                alt="Background"
+                className="w-full h-full object-cover opacity-20"
+              />
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%] z-10 relative">
             <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
               Chaya's Journey
             </h3>
@@ -213,7 +225,7 @@ const Journey = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%] z-10 relative">
             <h3 className="text-blue-900 text-xl  font-roboto font-bold mb-2">
               Aarohi's Journey
             </h3>
@@ -225,8 +237,20 @@ const Journey = () => {
           </div>
         </div>
 
-        <div className="flex flex-col my-10 gap-4 items-end">
-          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+        {/* Second section with background image */}
+        <div className="flex flex-col my-10 gap-4 items-end relative">
+          {/* Background image for second section */}
+          <div className="absolute top-0 left-0 w-full h-full z-0">
+            <div className="absolute left-0 -top-10 w-[70%] h-[50%]">
+              <img
+                src={photo2}
+                alt="Background"
+                className="w-full h-full object-cover opacity-20"
+              />
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%] z-10 relative">
             <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
               Sarika's Journey
             </h3>
@@ -236,7 +260,7 @@ const Journey = () => {
               empowering other girls through education.
             </p>
           </div>
-          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%] z-10 relative">
             <h3 className="text-blue-900 font-roboto text-xl font-bold mb-2">
               Deepa's Story
             </h3>
@@ -248,8 +272,20 @@ const Journey = () => {
           </div>
         </div>
 
-        <div className="flex flex-col my-10 gap-4">
-          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+        {/* Third section with background image */}
+        <div className="flex flex-col my-10 gap-4 relative">
+          {/* Background image for third section */}
+          <div className="absolute top-0 right-0 w-full h-full z-0">
+            <div className="absolute right-0 top-5 w-[70%] h-[40%]">
+              <img
+                src={photo3}
+                alt="Background"
+                className="w-full h-full object-cover opacity-20"
+              />
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%] z-10 relative">
             <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
               Rekha's Journey
             </h3>
@@ -260,7 +296,7 @@ const Journey = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%] z-10 relative">
             <h3 className="text-blue-900 font-roboto text-xl font-bold mb-2">
               Archana's Journey
             </h3>
@@ -269,6 +305,17 @@ const Journey = () => {
               dreams of being a doctor and starting her own school to empower
               young girls.
             </p>
+          </div>
+          
+          {/* Additional background image for bottom section */}
+          <div className="absolute bottom-[-50px] left-0 w-full h-full z-0">
+            <div className="absolute -left-4 bottom-5 w-[80%] h-[40%]">
+              <img
+                src={photo4}
+                alt="Background"
+                className="w-full h-full object-cover opacity-20"
+              />
+            </div>
           </div>
         </div>
       </div>
