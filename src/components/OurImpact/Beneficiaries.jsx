@@ -17,9 +17,11 @@ const Beneficiaries = () => {
     <div className="flex flex-col md:flex-row bg-white shadow-sm">
       {/* Left Section */}
       <div className="sm:pr-4 p-4 sm:p-12 max-w-sm:w-full sm:w-7/12">
-        <h2 className="font-bebas font-normal text-5xl leading-[100%] tracking-[0%] text-start text-black">BENEFICIARIES</h2>
+        <h2 className="font-bebas font-normal text-3xl sm:text-5xl leading-[100%] tracking-[0%] text-start text-black">
+          BENEFICIARIES
+        </h2>
 
-        <p className="mb-4 mt-5 text-gray-700 text-xl">
+        <p className="mb-4 mt-5 text-gray-700 text-base sm:text-xl">
           At the{" "}
           <span className="font-extrabold font-inter">
             Suresh Muthe Residential Hostel
@@ -27,12 +29,12 @@ const Beneficiaries = () => {
           —future doctors, artists, and leaders. We proudly support
         </p>
 
-        <h3 className="text-4xl font-bold text-blue-jivhala font-inter mb-6">
+        <h3 className="text-2xl sm:text-4xl font-bold text-blue-jivhala font-inter mb-6">
           45 remarkable girls
         </h3>
 
-        <div className="bg-white border border-gray-200  px-6 pt-7 pb-9 rounded-lg mb-6">
-          <h4 className="text-2xl font-semibold text-[#0B1956] mb-5">
+        <div className="bg-white border border-gray-200 px-6 pt-7 pb-9 rounded-lg mb-6">
+          <h4 className="text-xl sm:text-2xl font-semibold text-[#0B1956] mb-5">
             Our Achievements
           </h4>
 
@@ -43,7 +45,7 @@ const Beneficiaries = () => {
                 alt="Achievement 1"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">
+              <span className="text-base sm:text-lg">
                 Over
                 <span className="font-semibold"> 1,000 graduates</span> from
                 Anuradha Primary School.
@@ -55,7 +57,9 @@ const Beneficiaries = () => {
                 alt="Achievement 2"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">Annual talent gatherings fostering self-expression.</span>
+              <span className="text-base sm:text-lg">
+                Annual talent gatherings fostering self-expression.
+              </span>
             </li>
             <li className="flex items-center">
               <img
@@ -63,7 +67,9 @@ const Beneficiaries = () => {
                 alt="Achievement 3"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">Employment support for mothers of hostel residents.</span>
+              <span className="text-base sm:text-lg">
+                Employment support for mothers of hostel residents.
+              </span>
             </li>
             <li className="flex items-center">
               <img
@@ -71,7 +77,7 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">
+              <span className="text-base sm:text-lg">
                 Career inspiration sessions during Navratri featuring successful
                 women.
               </span>
@@ -79,8 +85,8 @@ const Beneficiaries = () => {
           </ul>
         </div>
 
-        <div className="bg-white border border-gray-200  px-6 pt-7 pb-9 rounded-lg mb-6">
-          <h4 className="text-2xl font-semibold text-[#0B1956] mb-5">
+        <div className="bg-white border border-gray-200 px-6 pt-7 pb-9 rounded-lg mb-6">
+          <h4 className="text-xl sm:text-2xl font-semibold text-[#0B1956] mb-5">
             Expected Outcomes
           </h4>
 
@@ -91,7 +97,9 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">Academic growth and love for learning.</span>
+              <span className="text-base sm:text-lg">
+                Academic growth and love for learning.
+              </span>
             </li>
             <li className="flex items-center">
               <img
@@ -99,7 +107,9 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">Health and emotional well-being.</span>
+              <span className="text-base sm:text-lg">
+                Health and emotional well-being.
+              </span>
             </li>
             <li className="flex items-center">
               <img
@@ -107,7 +117,9 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">Inner strength and resilience.</span>
+              <span className="text-base sm:text-lg">
+                Inner strength and resilience.
+              </span>
             </li>
             <li className="flex items-center">
               <img
@@ -115,14 +127,16 @@ const Beneficiaries = () => {
                 alt="Achievement 4"
                 className="w-5 h-5 mr-2"
               />
-              <span className="text-lg">Role models inspiring their communities.</span>
+              <span className="text-base sm:text-lg">
+                Role models inspiring their communities.
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
       {/* Right Section - Photo Collage */}
-      <div className="w-full  sm:w-[472px] md:w-[572px] lg:w-5/12 h-full mt-6 md:mt-0 mx-auto">
+      <div className="w-full sm:w-[472px] md:w-[572px] lg:w-5/12 h-full mt-6 md:mt-0 mx-auto">
         <div className="relative w-full max-w-2xl mx-auto">
           <div className="bg-[#FB9EBB] right-0 p-0 md:pl-12 py-4">
             <div className="flex flex-col gap-2 md:gap-4">

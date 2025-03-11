@@ -8,16 +8,16 @@ const WhoWeAre = () => {
   return (
     <div className="border overflow-hidden bg-white">
       <div className="py-10 px-6">
-        <h1 className="font-bebas font-normal text-[40px] leading-[100%] tracking-[0%] text-center text-black">
+        <h1 className="font-bebas font-normal text-3xl sm:text-[40px] leading-[100%] tracking-[0%] text-center text-black">
           WHO ARE WE
         </h1>
-        <p className="text-center mx-auto w-[75%] text-black leading-relaxed mt-4  font-inter">
+        <p className="text-justify mx-auto w-[75%] text-black leading-relaxed mt-4 text-base sm:text-lg font-inter">
           Nestled in the heart of Pune, Jivhala Foundation is a beacon of hope
           for young girls from underprivileged communities. Since 2015, we have
           been committed to empowering these girls to overcome barriers to
           education, healthcare, and emotional support.
         </p>
-        <p className="text-center text-black leading-relaxed mt-4 font-inter">
+        <p className="text-justify mx-auto w-[75%] text-black leading-relaxed mt-4 text-base sm:text-lg font-inter">
           Founded by Adv. Sharvari Muthe, we offer a sanctuary where dreams take
           flight and potential blossoms into purpose.
         </p>

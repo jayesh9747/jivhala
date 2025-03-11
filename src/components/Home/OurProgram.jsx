@@ -3,8 +3,10 @@ import { FaHome, FaBook, FaComments } from 'react-icons/fa';
 import icon1 from "../../assets/hlc1.png"
 import icon2 from "../../assets/hlc2.png"
 import icon3 from "../../assets/hlc3.png"
+import { useNavigate } from "react-router-dom";
 
 const OurPrograms = () => {
+  const navigate = useNavigate();
   return (
     <div className="border border-[#FB9EBB] bg-white rounded-lg p-8 flex flex-col items-center">
       <h2 className="font-['Bebas_Neue'] font-normal text-3xl lg:text-5xl leading-[100%] text-center mt-5 mb-10 lg:mt-8 lg:mb-16">
@@ -46,7 +48,10 @@ const OurPrograms = () => {
         </div>
       </div>
       
-      <button className="bg-[#0B1956] text-white font-medium py-3 px-10 rounded-md mt-4">
+      <button
+      className="bg-[#0B1956] text-white font-medium py-3 px-10 rounded-md mt-4"
+      onClick={() => navigate("/our-work")}
+    >
         Learn More
       </button>
     </div>

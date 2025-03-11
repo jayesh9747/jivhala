@@ -12,8 +12,8 @@ function Main() {
     <div className="flex flex-col gap-10 my-4 sm:m-4 md:m-8 lg:m-8">
       <HeroSection />
       <Vision />
+      <Mission />
       <PerspectiveSection />
-      <Mission /> 
       <OurProgram />
       <DonationForm />
       <Contact />

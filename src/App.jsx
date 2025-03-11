@@ -10,10 +10,12 @@ import Donate from "./pages/Donate";
 import UPIPayment from "./components/Payment/UPIPayment";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Header />
         <Routes>

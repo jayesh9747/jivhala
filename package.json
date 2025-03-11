@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "flag-icon-css": "^4.1.7",
-    "itffc": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",

@@ -66,7 +66,7 @@ const programs = [
 
 const OurPrograms = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center mt-10">
       <div className="w-full h-auto border border-[#FB9EBB] bg-[#FEDCD2] rounded-lg px-4 py-4 md:p-8">
         {/* Heading */}
         <h1 className="font-bebas font-normal text-[28px] md:text-[48px] leading-[100%] tracking-[0%] text-center text-black mt-4 md:mt-12 mb-4 md:mb-16">

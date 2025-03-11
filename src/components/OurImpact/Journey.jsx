@@ -9,14 +9,14 @@ import photo4 from "../../assets/ourimpact-4.png";
 const Journey = () => {
   return (
     <div className="bg-blue-jivhala w-full p-4 sm:p-8 relative overflow-hidden min-h-screen">
-      <div className="w-[100vw] sm:hidden bg-black flex justify-end"> 
+      <div className="w-[100vw] sm:hidden bg-black flex justify-end">
         <div className="absolute w-[70vw] mt-4 h-[20vh] p-2">
-              <img
-                src={photo1}
-                alt="Background"
-                className="w-full h-full object-cover opacity-20"
-              />
-          </div>
+          <img
+            src={photo1}
+            alt="Background"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
       </div>
       {/* Title */}
       <h1 className="text-white text-4xl font-bold mb-12 z-10 relative">
@@ -136,8 +136,8 @@ const Journey = () => {
             </h3>
             <p className="text-gray-700 text-sm">
               Aarohi, a bright 12-year-old, loves writing and art. She dreams of
-              self reliance and aims to inspire others through her journey at
-              Jivla Foundation.
+              self-reliance and aims to inspire others through her journey at
+              Jivhala Foundation.
             </p>
           </div>
         </div>
@@ -199,34 +199,33 @@ const Journey = () => {
         </div>
       </div>
 
-
-        {/* mobile view  */}
-        <div className="flex z-50 sm:hidden flex-col">
-          <div className="flex flex-col my-10 gap-4">
+      {/* mobile view  */}
+      <div className="flex z-50 sm:hidden flex-col">
+        <div className="flex flex-col my-10 gap-4">
           <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
-              <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
-                Chaya's Journey
-              </h3>
-              <p className="text-gray-700 text-sm">
-                Chaya joined Jivhala Foundation at a crossroads in life, facing
-                challenges that she chose to rise above. Education transformed
-                her, and she now dreams of becoming a fashion designer.
-              </p>
-            </div>
+            <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
+              Chaya's Journey
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Chaya joined Jivhala Foundation at a crossroads in life, facing
+              challenges that she chose to rise above. Education transformed
+              her, and she now dreams of becoming a fashion designer.
+            </p>
+          </div>
 
-            <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
-              <h3 className="text-blue-900 text-xl  font-roboto font-bold mb-2">
-                Aarohi's Journey
-              </h3>
-              <p className="text-gray-700 text-sm">
-                Aarohi, a bright 12-year-old, loves writing and art. She dreams of
-                self reliance and aims to inspire others through her journey at
-                Jivla Foundation.
-              </p>
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+            <h3 className="text-blue-900 text-xl  font-roboto font-bold mb-2">
+              Aarohi's Journey
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Aarohi, a bright 12-year-old, loves writing and art. She dreams of
+              self reliance and aims to inspire others through her journey at
+              Jivla Foundation.
+            </p>
           </div>
-          </div>
-          
-          <div className="flex flex-col my-10 gap-4 items-end">
+        </div>
+
+        <div className="flex flex-col my-10 gap-4 items-end">
           <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
             <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
               Sarika's Journey
@@ -237,19 +236,19 @@ const Journey = () => {
               empowering other girls through education.
             </p>
           </div>
-            <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
-              <h3 className="text-blue-900 font-roboto text-xl font-bold mb-2">
-                Deepa's Story
-              </h3>
-              <p className="text-gray-700 text-sm">
-                At just eight, Deepa is ambitious and dreams of becoming a doctor.
-                She wants to build a school for underprivileged kids, believing
-                every child deserves education.
-              </p>
-            </div>
+          <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
+            <h3 className="text-blue-900 font-roboto text-xl font-bold mb-2">
+              Deepa's Story
+            </h3>
+            <p className="text-gray-700 text-sm">
+              At just eight, Deepa is ambitious and dreams of becoming a doctor.
+              She wants to build a school for underprivileged kids, believing
+              every child deserves education.
+            </p>
           </div>
+        </div>
 
-          <div className="flex flex-col my-10 gap-4">
+        <div className="flex flex-col my-10 gap-4">
           <div className="bg-white rounded-md p-4 shadow h-full w-[80%]">
             <h3 className="text-blue-900 text-xl font-roboto font-bold mb-2">
               Rekha's Journey
@@ -271,9 +270,8 @@ const Journey = () => {
               young girls.
             </p>
           </div>
-          </div>
         </div>
-      
+      </div>
     </div>
   );
 };
