@@ -12,6 +12,7 @@ import im3 from "../../assets/im3.png";
 import im4 from "../../assets/im4.png";
 import im5 from "../../assets/im5.png";
 import im6 from "../../assets/im6.png";
+import im7 from "../../assets/im8.png";
 
 const programs = [
   {
@@ -52,7 +53,7 @@ const programs = [
     title: "Cultural Enrichment",
     description:
       "Festivals, art, and craft workshops connect them to their roots and spark creativity.",
-    image: im5,
+    image: im7,
   },
   {
     id: 6,
@@ -101,7 +102,7 @@ const OurPrograms = () => {
                 <img
                   src={program.image}
                   alt={program.title}
-                  className="w-full h-[125.64px] md:h-[281px] rounded-[10px] opacity-100 object-cover "
+                  className="w-full h-[125.64px] md:h-[281px] rounded-[10px] opacity-95 object-cover "
                 />
               </div>
             </div>
