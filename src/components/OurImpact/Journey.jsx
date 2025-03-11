@@ -26,7 +26,7 @@ const Journey = () => {
       {/* Large quotation marks */}
 
       <div
-        className="absolute top-[70px] sm:top-0 md:top-[34px] font-bebas left-5 text-[#FB9EBB]  z-20"
+        className="absolute top-[70px] sm:top-0 md:top-[4px] font-bebas left-4 md:left-8 text-[#FB9EBB]  z-20"
         style={{
           fontFamily: "Bebas Neue",
           fontWeight: "400",
