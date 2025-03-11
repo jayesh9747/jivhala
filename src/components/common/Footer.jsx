@@ -9,36 +9,53 @@ const Footer = () => {
           {/* Column 1 */}
           <div>
             <h3 className="font-semibold text-[16px] leading-[20px] sm:text-[16px] sm:leading-[20px] md:text-[24px] md:leading-[29px] lg:text-[24px] lg:leading-[30px] font-quicksand mb-4">
-              <Link to="/ourwork">Our Work</Link>
+              <Link to="/our-work">Our Work</Link>
             </h3>
             <ul>
-              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">Our Impact</li>
-              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">Programs</li>
+              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">
+                <Link to="/our-impact">Our Impact</Link>
+              </li>
+              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">
+                <Link to="/our-work">Programs</Link>
+              </li>
             </ul>
           </div>
-          
+
           {/* Column 2 */}
           <div>
-            <h3 className="font-semibold text-[16px] leading-[20px] sm:text-[16px] sm:leading-[20px] md:text-[24px] md:leading-[29px] lg:text-[24px] lg:leading-[30px] font-quicksand mb-4">Company</h3>
+            <h3 className="font-semibold text-[16px] leading-[20px] sm:text-[16px] sm:leading-[20px] md:text-[24px] md:leading-[29px] lg:text-[24px] lg:leading-[30px] font-quicksand mb-4">
+              Company
+            </h3>
             <ul>
-              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]"><Link to="/aboutus">About Us</Link></li>
-              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">Gallery</li>
+              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">
+                <Link to="/about-us">About Us</Link>
+              </li>
+              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">
+                <Link to="/gallery">Gallery</Link>
+              </li>
             </ul>
           </div>
-          
+
           {/* Column 3 */}
           <div>
-            <h3 className="font-semibold text-[16px] leading-[20px] sm:text-[16px] sm:leading-[20px] md:text-[24px] md:leading-[29px] lg:text-[24px] lg:leading-[30px] font-quicksand mb-4"><Link to="/getinvolved">Donate</Link></h3>
+            <h3 className="font-semibold text-[16px] leading-[20px] sm:text-[16px] sm:leading-[20px] md:text-[24px] md:leading-[29px] lg:text-[24px] lg:leading-[30px] font-quicksand mb-4">
+              <Link to="/donate">Donate</Link>
+            </h3>
             <ul>
-              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">Donate</li>
+              <li className="mb-2 text-[12px] leading-[15px] sm:text-[12px] sm:leading-[15px] md:text-[18px] md:leading-[21px] lg:text-[16px] lg:leading-[20px]">
+                <Link to="/donate">Support Us</Link>
+              </li>
             </ul>
           </div>
-          
+
           {/* Horizontal Line - visible only on mobile, hidden on larger screens */}
           <hr className="border-t border-white mt-6 mb-6 col-span-3 block sm:hidden" />
-          
+
           {/* Column 4: Logo - Keeping original positioning */}
-          <Link to="/" className="sm:col-start-4 sm:row-start-1 col-span-3 sm:col-span-1">
+          <Link
+            to="/"
+            className="sm:col-start-4 sm:row-start-1 col-span-3 sm:col-span-1"
+          >
             <div className="ml-28 sm:ml-28 md:ml-0 lg:ml-0 rounded-2xl flex justify-center items-center h-[40px] w-[110px] sm:h-[40px] sm:w-[110px] md:h-[90px] md:w-[200px] lg:h-[100px] lg:w-[250px]">
               <img
                 src={logo1}
