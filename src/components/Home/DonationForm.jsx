@@ -1,59 +1,181 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const DonationForm = () => {
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Phone: "",
+    Amount: "",
+    Message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); // 'success' or 'error'
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setMessageType("");
+
+    try {
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbylVslj-6iguMBbjeJnZqred1JyAhJwyRvdp5QQ2Fh1oKiqWNjs0TvGHxtptZW_b4NeLg/exec";
+      if (!scriptURL) {
+        throw new Error("Google Script URL is not configured");
+      }
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.result === "success") {
+        setMessageType("success");
+        setSubmitMessage("Thank you for your donation!");
+        setFormData({
+          Name: "",
+          Email: "",
+          Phone: "",
+          Amount: "",
+          Message: "",
+        });
+      } else {
+        throw new Error(result.error || "Network response was not ok");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessageType("error");
+      setSubmitMessage("Error submitting form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-[#FB9EBB] min-h-screen flex items-center justify-center">
       <div className="w-[275.97px] sm:w-[418px] md:w-5/12 my-12 md:my-24 ">
-      <h1 className="text-white text-[30px] md:text-[48px] font-normal leading-[100%] tracking-[0] text-center font-['Bebas_Neue'] mb-8">
-  SUPPORT OUR CAUSE
-</h1>
-  <form className="space-y-2 md:space-y-4">
+        <h1 className="text-white text-[30px] md:text-[48px] font-normal leading-[100%] tracking-[0] text-center font-['Bebas_Neue'] mb-8">
+          SUPPORT OUR CAUSE
+        </h1>
+
+        {submitMessage && (
+          <div
+            className={`bg-white p-2 rounded-lg mb-4 text-center ${
+              messageType === "error" ? "text-red-500" : "text-green-500"
+            }`}
+          >
+            {submitMessage}
+          </div>
+        )}
+
+        <form className="space-y-2 md:space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-gray-800 text-base mb-1" htmlFor="name">Name</label>
+            <label
+              className="block text-gray-800 text-base mb-1"
+              htmlFor="Name"
+            >
+              Name
+            </label>
             <input
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 placeholder-gray-400"
-              placeholder='Name'
+              placeholder="Name"
               type="text"
-              id="name"
+              id="Name"
+              value={formData.Name}
+              onChange={handleChange}
+              required
             />
           </div>
+
           <div>
-            <label className="block text-gray-800 text-base mb-1" htmlFor="email">Email</label>
+            <label
+              className="block text-gray-800 text-base mb-1"
+              htmlFor="Email"
+            >
+              Email
+            </label>
             <input
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 placeholder-gray-400"
-              placeholder='Email'
+              placeholder="Email"
               type="email"
-              id="email"
+              id="Email"
+              value={formData.Email}
+              onChange={handleChange}
+              required
             />
           </div>
+
           <div>
-            <label className="block text-gray-800 text-base mb-1" htmlFor="phone">Phone number</label>
+            <label
+              className="block text-gray-800 text-base mb-1"
+              htmlFor="Phone"
+            >
+              Phone number
+            </label>
             <input
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 placeholder-gray-400"
-              type="text"
-              id="phone"
+              type="tel"
+              id="Phone"
               placeholder="IN +"
+              value={formData.Phone}
+              onChange={handleChange}
             />
           </div>
+
           <div>
-            <label className="block text-gray-800 text-base mb-1" htmlFor="amount">Donation Amount</label>
+            <label
+              className="block text-gray-800 text-base mb-1"
+              htmlFor="Amount"
+            >
+              Donation Amount
+            </label>
             <input
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 placeholder-gray-400"
-              placeholder='Amount'
-              type="text"
-              id="amount"
+              placeholder="Amount"
+              type="number"
+              id="Amount"
+              value={formData.Amount}
+              onChange={handleChange}
+              required
             />
           </div>
+
           <div>
-            <label className="block text-gray-800 text-base mb-1" htmlFor="message">Message</label>
+            <label
+              className="block text-gray-800 text-base mb-1"
+              htmlFor="Message"
+            >
+              Message
+            </label>
             <textarea
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 h-24 placeholder-gray-400"
-              id="message"
-              placeholder='Message'
+              id="Message"
+              placeholder="Message"
+              value={formData.Message}
+              onChange={handleChange}
             ></textarea>
           </div>
-          <button className="bg-[#0B1956] text-white font-bold rounded-lg py-3 px-4 w-48 block mx-auto mt-12">
-            Donate Now
+
+          <button
+            className="bg-[#0B1956] text-white font-bold rounded-lg py-3 px-4 w-48 block mx-auto mt-12"
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Processing..." : "Donate Now"}
           </button>
         </form>
       </div>
