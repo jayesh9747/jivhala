@@ -16,7 +16,10 @@ exports.handler = async function (event, context) {
     if (!email || !number || !address) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ success: false, message: "Missing required fields" }),
+        body: JSON.stringify({
+          success: false,
+          message: "Missing required fields",
+        }),
       };
     }
 
@@ -34,20 +37,22 @@ exports.handler = async function (event, context) {
     console.log("SMTP Connection Successful");
 
     const htmlContent = `
-      <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
-        <h2 style="color: #0B1956;">Thank You for Your Submission</h2>
-        <p>Dear ${name},</p>
-        <p>Thank you for reaching out to us. We have received the following details:</p>
-        <ul>
-          <li>Email: ${email}</li>
-          <li>Phone Number: ${number}</li>
-          <li>Address: ${address}</li>
-        </ul>
-        <p>We will contact you shortly.</p>
-        <p>Warm regards,</p>
-        <p><strong>Jivhala Foundation</strong></p>
-      </div>
-    `;
+    <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+      <h2 style="color: #0B1956;">Thank You for Your Interest in Supporting Jivhala Foundation</h2>
+      <p>Dear ${name},</p>
+      <p>Thank you for your interest in supporting Jivhala Foundation. We truly appreciate your willingness to contribute towards our cause.</p>
+      <p>Our team has received your details and will reach out to you shortly to discuss the donation process and how your support can make a meaningful impact.</p>
+      <p>If you have any questions or specific preferences regarding your donation, please feel free to reply to this email or contact us at:</p>
+      <ul>
+        <li>Email: <a href="mailto:jivhalafoundation2015@gmail.com">jivhalafoundation2015@gmail.com</a></li>
+        <li>Phone: 8208769088 / 9049144902</li>
+      </ul>
+      <p>Your generosity helps us continue our mission, and we look forward to connecting with you soon.</p>
+      <p>Warm regards,</p>
+      <p><strong>Jivhala Foundation</strong></p>
+      <p><a href="https://jivhala.com" target="_blank">jivhala.com</a> | <a href="mailto:jivhalafoundation2015@gmail.com">jivhalafoundation2015@gmail.com</a> | 8208769088 / 9049144902</p>
+    </div>
+  `;
 
     const info = await transporter.sendMail({
       from: `"Jivhala Foundation" <${process.env.MAIL_USER}>`,
