@@ -28,7 +28,7 @@ const DonationForm = () => {
 
     try {
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbylVslj-6iguMBbjeJnZqred1JyAhJwyRvdp5QQ2Fh1oKiqWNjs0TvGHxtptZW_b4NeLg/exec";
+        "https://script.google.com/macros/s/AKfycbycHCp4TaRGE3Okri2ondElXV-jug0L4WuqVWuAvZJfR05K18ECy_EdfnKjI9TO9v-F/exec";
       if (!scriptURL) {
         throw new Error("Google Script URL is not configured");
       }
@@ -39,23 +39,19 @@ const DonationForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "no-cors",
       });
 
-      const result = await response.json();
 
-      if (response.ok && result.result === "success") {
-        setMessageType("success");
-        setSubmitMessage("Thank you for your donation!");
-        setFormData({
-          Name: "",
-          Email: "",
-          Phone: "",
-          Amount: "",
-          Message: "",
-        });
-      } else {
-        throw new Error(result.error || "Network response was not ok");
-      }
+      setMessageType("success");
+      setSubmitMessage("Thank you for your donation!");
+      setFormData({
+        Name: "",
+        Email: "",
+        Phone: "",
+        Amount: "",
+        Message: "",
+      });
     } catch (error) {
       console.error("Error:", error);
       setMessageType("error");
@@ -95,6 +91,7 @@ const DonationForm = () => {
               placeholder="Name"
               type="text"
               id="Name"
+              name="Name"
               value={formData.Name}
               onChange={handleChange}
               required
@@ -113,6 +110,7 @@ const DonationForm = () => {
               placeholder="Email"
               type="email"
               id="Email"
+              name="Email"
               value={formData.Email}
               onChange={handleChange}
               required
@@ -130,6 +128,7 @@ const DonationForm = () => {
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 placeholder-gray-400"
               type="tel"
               id="Phone"
+              name="Phone"
               placeholder="IN +"
               value={formData.Phone}
               onChange={handleChange}
@@ -148,6 +147,7 @@ const DonationForm = () => {
               placeholder="Amount"
               type="number"
               id="Amount"
+              name="Amount"
               value={formData.Amount}
               onChange={handleChange}
               required
@@ -164,6 +164,7 @@ const DonationForm = () => {
             <textarea
               className="w-full bg-white border border-gray-300 rounded-lg p-2 lg:p-3 h-24 placeholder-gray-400"
               id="Message"
+              name="Message"
               placeholder="Message"
               value={formData.Message}
               onChange={handleChange}
