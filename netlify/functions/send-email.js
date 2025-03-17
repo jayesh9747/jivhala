@@ -22,30 +22,29 @@ exports.handler = async function (event, context) {
     });
 
     const htmlContent = `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
-    <h2 style="color: #0B1956;">Thank you for contacting Jivhala Foundation</h2>
-    <p>Dear ${name},</p>
-    <p>We appreciate you reaching out to us. Your message has been successfully received and our team is reviewing your inquiry. Below is a summary of the details you provided:</p>
-    <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
-    <p><strong>From:</strong> ${name} (${email})</p>
-    <p><strong>Subject:</strong> ${subject}</p>
-    <div style="margin: 20px 0;">
-      <h3 style="margin-bottom: 10px;">Message:</h3>
-      <p>${message}</p>
+    <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+      <h2 style="color: #0B1956;">Thank You for Your Interest in Supporting Jivhala Foundation</h2>
+      <p>Dear ${name},</p>
+      <p>Thank you for your interest in supporting Jivhala Foundation. We truly appreciate your willingness to contribute towards our cause.</p>
+      <p>Our team has received your details and will reach out to you shortly to discuss the donation process and how your support can make a meaningful impact.</p>
+      <p>If you have any questions or specific preferences regarding your donation, please feel free to reply to this email or contact us at:</p>
+      <ul>
+        <li>Email: <a href="mailto:jivhalafoundation2015@gmail.com">jivhalafoundation2015@gmail.com</a></li>
+        <li>Phone: 8208769088 / 9049144902</li>
+      </ul>
+      <p>Your generosity helps us continue our mission, and we look forward to connecting with you soon.</p>
+      <p>Warm regards,</p>
+      <p><strong>Jivhala Foundation</strong></p>
+      <p><a href="https://jivhala.com" target="_blank">jivhala.com</a> | <a href="mailto:jivhalafoundation2015@gmail.com">jivhalafoundation2015@gmail.com</a> | 8208769088 / 9049144902</p>
     </div>
-    <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
-    <p>Our team will get back to you as soon as possible with further information or answers to your queries.</p>
-    <p>Thank you for your interest and support.</p>
-    <p>Sincerely,<br />The Jivhala Foundation Team</p>
-  </div>
-`;
-
+  `;
+  
     // Send mail
     const info = await transporter.sendMail({
       from: `"Jivhala Contact Form" <${process.env.MAIL_USER}>`,
       to: process.env.RECIPIENT_EMAIL || process.env.MAIL_USER,
       replyTo: email,
-      subject: `New Contact: ${subject}`,
+      subject: ` Thank You for Your Interest in Supporting Jivhala Foundation`,
       html: htmlContent,
     });
 
