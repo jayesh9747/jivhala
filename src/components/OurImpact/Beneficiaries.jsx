@@ -24,7 +24,7 @@ const Beneficiaries = () => {
         <p className="mb-4 mt-5 text-gray-700 text-base sm:text-xl">
           At the{" "}
           <span className="font-extrabold font-inter">
-            Suresh Muthe Residential Hostel
+           late Suresh Muthe Residential Hostel
           </span>
           —future doctors, artists, and leaders. We proudly support
         </p>
