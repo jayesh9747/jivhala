@@ -9,11 +9,12 @@ exports.handler = async function (event, context) {
   }
 
   try {
-    const { email, number, address } = JSON.parse(event.body);
-
+    console.log(event.body);
+    const { email, phone, address } = JSON.parse(event.body);
+    
     const name = email.substring(0, email.lastIndexOf("@"));
 
-    if (!email || !number || !address) {
+    if (!email || !phone || !address) {
       return {
         statusCode: 400,
         body: JSON.stringify({
@@ -57,7 +58,7 @@ exports.handler = async function (event, context) {
     const info = await transporter.sendMail({
       from: `"Jivhala Foundation" <${process.env.MAIL_USER}>`,
       to: email,
-      subject: "Thank You for Your Submission",
+      subject: "Thank You for Your Interest in Supporting Jivhala Foundation",
       html: htmlContent,
     });
 

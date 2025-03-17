@@ -30,8 +30,8 @@ const Contact = () => {
         method: 'POST',
         body: JSON.stringify({
           email: formData.email,
-          subject: "New Contact Form Submission",
-          message: `Phone: ${formData.phone}\nAddress: ${formData.address}`
+          phone : formData.phone,
+          address: formData.address
         }),
         headers: {
           'Content-Type': 'application/json'
