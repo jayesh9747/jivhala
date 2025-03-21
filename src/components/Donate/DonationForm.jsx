@@ -47,7 +47,7 @@ const DonationPage = () => {
       });
 
       setMessageType("success");
-      setSubmitMessage("Thank you for your donation!");
+      setSubmitMessage("Thank you for your interest!");
       setFormData({
         Name: "",
         Email: "",
