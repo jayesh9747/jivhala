@@ -8,10 +8,9 @@ const MissionStatement = () => {
           OUR MISSION
         </h1>
         <p className="font-['Inter'] text-[12px] lg:text-[20px] leading-[100%] tracking-[5%] opacity-85 text-center mb-4 lg:mb-8">
-          A world where every girl, irrespective of her circumstances, is
-          valued, supported, and encouraged to achieve her dreams. We believe in
-          the power of education and empowerment to inspire generations and
-          uplift entire communities.
+          To uplift and empower girls from underprivileged backgrounds through
+          education, life skills, and emotional support, ensuring they lead
+          independent and dignified lives.
         </p>
       </div>
     </div>
